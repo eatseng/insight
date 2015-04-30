@@ -1,0 +1,25 @@
+<title>{{selected["word"]}} | ConferenceViewer</title>
+
+<navbar></navbar>
+
+<div class="word-background"></div>
+<div class="word">
+	<p>{{selected["word"]}}&nbsp{{selected["count"]}}</p>
+</div>
+
+<div class="center-container">
+	<div class="frame0 pic-animation" style="background-color:yellow"></div>
+	<div class="frame1 pic-animation" style="background-color:white"></div>
+	<div class="frame2 pic-animation" style="background-color:black"></div>
+	<div class="frame3 pic-animation" style="background-color:red"></div>
+</div>
+
+<div class="word-panel-background"></div>
+<div class="word-panel">
+	<p>Top 10 Tweeted Words</p>
+
+	<p ng-repeat="row in top_10_words">
+		<a ng-mouseover="mouseover(row)">&nbsp&nbsp{{$index + 1}}.&nbsp{{row.word}}&nbsp&nbsp{{row.count}}</a>
+	</p>
+</div>
+

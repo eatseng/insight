@@ -1,0 +1,107 @@
+.highlight {
+  background-color: #99FFCC;
+  color: black;
+  font-weight: 300;
+}
+
+.subcontainer-detail {
+    vertical-align: top;
+    left: 0%;
+    width: 25%;
+    margin: -3% 0% 5% 0%;
+    border: 1px solid black;
+    /*height: 300px;*/
+}
+
+.subcontainer-detail > div {
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;;
+    width: 100%;
+    height: 100%;
+}
+
+.subcontainer-detail > div > p.title {
+    position: relative;
+    margin-left: -2%;
+    font-weight: 500;
+}
+
+.subcontainer-detail > div.top_tweets > p.title {
+    color: black;
+    font-size: 170%;
+}
+
+.top_tweets {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 170%;
+    font-weight: 300;
+}
+.top_tweets > p {
+	padding: 0% 0% 0% 5%;
+}
+
+.top_tweets > table {
+	width: 100%;
+}
+
+.top_tweets > table > thead > tr > th, td {
+	text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.subcontainer-gallery {
+    vertical-align: top;
+    left: 0%;
+    width: 70%;
+    margin: -3% 5% 5% 0%;
+    border: 1px solid black;
+}
+
+.subcontainer-gallery > div {
+    position: relative;
+    height: 250px;
+    width: 31%;
+    margin: 1%;
+    display: inline-block;
+}
+
+.subcontainer-gallery > div > div {
+    display: block;
+    word-wrap:break-word;
+}
+
+.photo-box {
+    background-color: black;
+}
+
+.photo-box-header {
+    text-align: right;
+    font-weight: 600;
+    font-size: 90%;
+    color: white;
+    height: 21%;
+    margin-top: -1%;
+}
+
+.photo-box-header > p{
+    margin: 1%;
+    padding: 1.5%;
+}
+
+.photo-box-body {
+    position: absolute;
+    top: 25%;
+    height: 66%;
+    width: 93%;
+    padding: 2% 2% 2% 5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+

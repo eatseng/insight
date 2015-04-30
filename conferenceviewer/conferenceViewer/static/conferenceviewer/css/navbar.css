@@ -1,0 +1,107 @@
+.conf-navbar {
+  top: 0;
+  /*position: fixed;*/
+  width: 98%;
+  margin: 0% 1% 0% 1%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 150%;
+  font-weight: 200;
+  z-index: 10000
+}
+
+.navbar-placeholder {
+  height: 50px;
+}
+
+.conf-navbar > div {
+  height: 40px;
+  position: relative;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.conf-navbar > div > div.hang-left {
+  position: absolute;
+  margin-top: -1%;
+  left: 10%;
+}
+
+.conf-navbar > div > div.hang-right {
+  position: absolute;
+  margin-top: -1.5%;
+  right: 10%;
+}
+
+.conf-navbar > div > div > ul {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    margin: 10%;
+    width: 100%;
+}
+
+.conf-navbar > div > div > ul > li {
+  display: inline-block;
+  text-align:center;
+  min-width: 4em;
+}
+
+.conf-navbar > div > div > ul > li.active {
+  background-color:red;
+}
+
+.conf-navbar > div > div > ul > li:hover {
+  color: green;
+}
+
+@media screen and (max-width: 1000px) {
+  .conf-navbar {
+    /*position: absolute;*/
+    font-size: 100%;
+  }
+
+  .navbar-placeholder {
+    height: 30px;
+  }
+
+  .conf-navbar > div {
+    text-align: center;
+    background-color: white;
+    border: 0px;
+  }
+
+  .conf-navbar > div > div.hang-left {
+    -moz-document-margin: -1em 0em 0em -2em;
+    position: static;
+    left: 50%;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  .conf-navbar > div > div.hang-right {
+    -moz-document-margin: -1em 0em 0em -2em;
+    position: static;
+    right: 50%;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+/*  .conf-navbar > div > div {
+    position: relative !important;
+    -moz-document-margin: -1em 0em 0em -2em;
+  }*/
+
+  .conf-navbar > div > div > ul {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+  .conf-navbar > div > div > ul > li {
+    margin: 0.1em 0em 0em 0em;
+    width: 100%;
+  }
+}

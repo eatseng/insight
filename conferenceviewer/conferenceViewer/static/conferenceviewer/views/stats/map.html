@@ -1,0 +1,91 @@
+<title>Statistics Map | ConferenceViewer</title>
+
+<navbar></navbar>
+
+<div class="stats-container">
+
+
+  <div class="stats-map">
+  	<div id="d3_stats_container"></div>
+  	<div class="button-group">
+	  	<div class="button active" id="batch" ng-click="batchMode()">Batch</div>
+	  	<div class="button" id="rt" ng-click="rtMode()">Real Time</div>
+	  	<div class="button" id="heat" ng-click="heatMode()">Heat Map</div>
+	  	<div class="button" id="eb" ng-click="ebMode()">Eventbrite</div>
+	</div>
+  </div>
+
+  <div class="stats-panel">
+		<div class="panel-header">
+			<p>Statistics</p>
+		</div>
+		<div class="panel-body">
+			<div>
+				<div>
+	  			<p>Locations</p>
+	  			<p>Avg Tweets</p>
+	  			<p>Stdev</p>
+	  			<p>Total Tweets</p>
+	  		</div>
+	  		<div>
+	  			<p highlighter="tweetStats['locations']">{{tweetStats["locations"]}}</p>
+	  			<p highlighter="tweetStats['average']">{{tweetStats["average"]}}</p>
+	  			<p highlighter="tweetStats['stdev']">{{tweetStats["stdev"]}}</p>
+	  			<p highlighter="tweetStats['tweets']">{{tweetStats["tweets"]}}</p>
+	  		</div>
+			</div>
+			<div class="top_10">
+				<p class="header-title">Top Tweeted Words</p>
+				<table>
+		            <thead>
+		                <tr>
+		                    <th>Words</th>
+		                    <th>Counts</th>
+		                </tr>
+		            </thead>          
+		            <tbody>
+		                <tr ng-repeat="tweet in wordList track by $index">
+		                    <td style="text-align:center" highlighter="tweet.word">{{tweet.word}}</td>
+		                    <td style="text-align:center" highlighter="tweet.count">{{tweet.count}}</td>
+		                </tr>
+		            </tbody>
+		        </table>
+			</div>
+		</div>
+		<div class="chart">
+			<stack-chart class="d3-chart" name='tweet' chart='2' ylabel='Number of Tweets' bar='meetingBar' height='200' width='400' resize='0' lx='183' ly='0' mr='30' mt='0' tip='MI' data='tweetData'></stack-chart>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<script id="tweet-info-template" type="text/x-handlebars-template">
+	<div style="position:relative;background-color:white;padding-top:-20px;width:300px;height:100%">
+		<span class="close-btn" ng-click="close()"><a href="">X</a></span>
+	    <div style="background-color:black;color:white;margin:5%;padding:5%">
+	    	<h3 style="border: 1px solid white">Number of tweets:</h1>
+	    	<h4>{{info.tweets}}</h3>
+	    	<h3 style="border: 1px solid white">Top ranking word:</h2>
+	    	{{#each info.wordList}}
+	    		<h4>{{this.word}}  -  {{this.count}}</h4>
+    	 	{{/each}}
+	    </div>
+    </div>
+</script>
+
+<script id="eb-info-template" type="text/x-handlebars-template">
+	<div style="position:relative;background-color:white;padding-top:-20px;width:300px;height:100%">
+		<span class="close-btn" ng-click="close()"><a href="">X</a></span>
+	    <div style="background-color:black;color:white;margin:5%;padding:5%">
+	    	<h3 style="border: 1px solid white">Event Name:</h1>
+	    	<h4><a href="/#/conference/detail/{{info.eb_id}}" style="text-decoration:none;color:white">{{info.eventName}}</a></h3>
+	    	<h3 style="border: 1px solid white">Venue Name:</h1>
+	    	<h4>{{info.venueName}}</h3>
+	    	<h3 style="border: 1px solid white">Number of Tweets:</h1>
+	    	<h4>{{info.tweets}}</h3>
+	    </div>
+    </div>
+</script>

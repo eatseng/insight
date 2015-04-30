@@ -1,0 +1,19 @@
+<div class="conference-box-header" style="background-color:{{data.colors}};">
+	<p>{{data.start_str1}}</p>
+	<p>{{data.start_str2}}</p>
+</div>
+<div class="conference-box-body">
+	<p ng-click="goToEvent({confId:data.eb_id})" style="color:#1a1a1a;font-size:20px;font-weight:700;max-height:60px;cursor: pointer;">{{data.event_name}}</p>
+	<div style="font-size: 15px;padding-left: 0;">
+		<p>{{data.event_type}}</p>
+		<p>{{data.venue_name}}</p>
+	</div>
+
+
+</div>
+<div class="conference-box-footer">
+	<p>Live Tweets: {{data.tweets}}</p>
+</div>
+<div class="conference-box-logo">
+	<div style="background:url('{{data.logo_url}}') no-repeat center center;background-color:{{data.colors}};background-size:contain;"></div>
+</div>

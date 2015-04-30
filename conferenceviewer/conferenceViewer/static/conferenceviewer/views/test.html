@@ -1,0 +1,22 @@
+<h1>testing</h1>
+
+<div ng-init="items=['a','b','c','d','e','x']">
+  <input placeholder="filter" ng-model="f" />
+  <div ng-repeat="item in items | filter:f" class="repeat-item">
+    {{item}}
+  </div>
+</div>
+
+<div>
+  <input placeholder="Filter Repeat Items..." ng-model="f" /> 
+  <div data-ng-repeat="item in titems | filter:f track by item" class="my-repeat-animation">
+    {{item}}
+  </div>
+</div>
+
+<div>
+  <input placeholder="Filter Repeat Items..." ng-model="f" /> 
+  <div data-ng-repeat="item in anotheritems | filter:f track by item" class="my-repeat-animation">
+    {{item}}
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<title>List of Conferences | ConferenceViewer</title>
+
+<navbar></navbar>
+
+<div class="background-screen"></div>
+<div class="container">
+    <div class="landing conference-box" ng-click="enter()">
+        <div class="screen">
+        </div>
+        <div class="title">
+            <p>Insight Data Engineering</p>
+            <p>Project - Conference Viewer</p>
+            <p>Edward Tseng</p>
+        </div>
+    </div>
+    
+    <div class="subnav">
+        <p>Search</p>
+        <div>
+            <div>
+                <p>By Event Name</p>
+                <input placeholder="Event Name" ng-model="search.event_name" ng-change="filterList()"/> 
+                <p>By Event Type</p>
+                <input placeholder="Event Type" ng-model="search.event_type" ng-change="filterList()"/> 
+                <p>By Event Date</p>
+                <input placeholder="eg. 2015-01-01 00:00:00" ng-model="search.start_time_utc" ng-change="filterList()"/> 
+                <p>By Tweets</p>
+                <input placeholder="eg. >= 1" ng-model="search.tweets" ng-change="filterList()"/> 
+            </div>
+        </div>
+    </div>
+
+    <div class="subcontainer">
+
+        <div class="list-header-pane">
+            <div class="header-info">
+                <div class="header-title">
+                    <p>Conference Listings</p>
+                    <p>Today:</p>
+                    <p>Tomorrow:</p>
+                    <p>Past 7 Days</p>
+                </div>
+                <div class="data">
+                    <p>&nbsp</p>
+                    <p highlighter="today">{{today | number:0}}</p>
+                    <p highlighter="tomorrow">{{tomorrow | number:0}}</p>
+                    <p highlighter="last7days">{{last7days | number:0}}</p>
+                </div>
+            </div>
+            <div class="header-cover">
+            </div>
+        </div>
+
+        <div class="list-header-stats">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Live Conferences</th>
+                        <th>Live Tweets</th>
+                        <th>Live Participants</th>
+                    </tr>
+                </thead>          
+                <tbody>
+                    <tr>
+                        <td style="text-align:center" highlighter="liveConf">{{liveConf | number:0}}</td>
+                        <td style="text-align:center" highlighter="liveTweets">{{liveTweets | number:0}}</td>
+                        <td style="text-align:center" highlighter="livePart">{{livePart | number:0}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conference-list">
+            <div ng-repeat="cbox in pagedItems[currentPage]" conference-box data="cbox" class="conference-box" id="{{$index}}" on-go-to-event="goToConf(confId)">
+            </div>
+        </div>
+        <div class="page-scroller">
+            <ul>
+                <li ng-class="{disabled: currentPage == 0}">
+                    <a href ng-click="prevPage()">« Prev</a>
+                </li>
+
+                <li ng-repeat="n in range(pagedItems.length, currentPage, currentPage + displayPage) "
+                    ng-class="{disabled: n == currentPage}"
+                    ng-click="setPage()">
+                    <a href ng-bind="n + 1">1</a>
+                </li>
+
+                <li ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
+                    <a href ng-click="nextPage()">Next »</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

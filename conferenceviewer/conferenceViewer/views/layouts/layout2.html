@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="edwardTseng">
+        <script src="{{url_for('static', filename='lib/bower_components/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/jqueryui/jquery-ui.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/angular/angular.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/angular-route/angular-route.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/angular-resource/angular-resource.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/angular-animate/angular-animate.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/angular-mocks/angular-mocks.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/handlebars/handlebars.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/d3/d3.min.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/topojson/topojson.js') }}"></script>
+        <script src="{{url_for('static', filename='lib/bower_components/d3-tip/index.js') }}"></script>
+        <script src="{{url_for('static', filename='js/datamaps.all.js') }}"></script>
+
+        <script src="{{url_for('static', filename='conferenceviewer/js/conferenceViewer.js') }}"></script>
+        <script src="{{url_for('static', filename='conferenceviewer/js/configs.js') }}"></script>
+        <script src="{{url_for('static', filename='conferenceviewer/js/controllers.js') }}"></script>
+        <script src="{{url_for('static', filename='conferenceviewer/js/directives.js') }}"></script>
+        <script src="{{url_for('static', filename='conferenceviewer/js/services.js') }}"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='lib/bower_components/jqueryui/themes/smoothness/jquery-ui.min.css') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/CV.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/stats.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/c_list.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/c_detail.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/animation.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/navbar.css') }}"></link>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='conferenceViewer/css/test.css') }}"></link>
+    </head>
+
+    <body class="backdrop">
+        <div class="conferenceViewer-alerts" id="div-alerts"></div>
+        <div class="notification" id="div-notification"></div>
+        <div class="notification" id="div-warning" style="background-color:red"></div>
+
+        {% block body %}
+        {% endblock body %}
+
+        <script id="alerts-template" type="text/x-handlebars-template">
+            <div class="alert alert-{{alert_type}} alert-block notices-alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{alerts_list}}
+                <strong>{{name}}!</strong>
+                {{description}}
+                {{alerts_list}}
+            </div>
+        </script>
+
+        <script id="err-alerts-template" type="text/x-handlebars-template">
+            <div class="alert alert-error alert-block notices-alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{Error}}
+                <strong>{{name}}!</strong>
+                {{description}}
+            </div>
+        </script>    
+    </body>
+
+</html>

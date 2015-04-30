@@ -1,0 +1,77 @@
+.center-container {
+  position: fixed;
+  top: 65px;
+  bottom: 1%;
+  right: 2%;
+  left: 2%;
+  z-index: 10;
+  /*border: 1px solid black;*/
+}
+
+.center-container > div {
+  position: relative;
+  display: inline-block;
+  margin: 0.25%;
+  height: 47%;
+  width: 49.2%;
+  background-size: contain;
+  border: 1px solid black;
+}
+
+.word-panel {
+  position: fixed;
+  bottom: 8%;
+  left: 4%;
+  height: 350px;
+  width: 20%;
+  z-index: 10000;
+}
+
+.word-panel > p {
+  margin: 2%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+.word-panel-background {
+  position: fixed;
+  bottom: 8%;
+  left: 4%;
+  height: 350px;
+  width: 20%;
+  opacity: 0.85;
+  background-color: white;
+  z-index: 1000;
+}
+
+.word {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -24%;
+  margin-left: -300px;
+  height: 200px;
+  width: 600px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 700%;
+  font-weight: 400;
+  z-index: 100001;
+}
+
+.word-background {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -18%;
+  margin-left: -300px;
+  height: 200px;
+  width: 600px;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 100000;
+}
+

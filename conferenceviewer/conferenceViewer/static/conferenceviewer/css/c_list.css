@@ -1,0 +1,260 @@
+.container {
+    display: flex;
+    vertical-align: top;
+}
+
+.landing {
+    background-image: url("../img/GYEONGJU ARTS CENTER BY SAMOO ARCHITECTS & ENGINEERS 11.jpg");
+    background-repeat:no-repeat;
+    -webkit-transition: 1.5s linear all;
+    transition: 1.5s linear all;
+    width: 10000000%;
+    height: 1000px;
+}
+
+.screen {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity:0.25;
+    background-color: black;
+}
+
+.background-screen {
+    position: fixed;
+    margin: 3% 0% 0% 3%;
+    height: 103%;
+    width: 93%;
+    background-color: ghostwhite;
+    top: -9%;
+    z-index: -1;
+}
+
+.title {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 200%;
+}
+
+.subnav {
+    display:hidden;
+    -webkit-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+    vertical-align: top;
+    margin: -2% 0% 0% 0%;
+    width: 5%;
+}
+
+.subnav > p {
+    margin: 5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.subnav > div {
+    display: none;
+    position: fixed;
+    top:15%;
+    left:2%;
+}
+
+.subnav > div > div {
+    margin: 5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 85%;
+    font-weight: 300;
+}
+
+.subnav:hover > div {
+    display: block;
+}
+
+.subnav:hover {
+    display:block;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    background-color: black;
+    color:white;
+    vertical-align: top;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: -2% 0% 0% 0%;
+    width: 18%;
+    border: 3px solid gray;
+    opacity: 1;
+}
+
+.subcontainer {
+    vertical-align: top;
+    left: 0%;
+    width: 90%;
+    margin: -4% 5% 5% 0%;
+}
+
+.list-header-pane {
+    display: block;
+    margin: 1% 0% 1% 0%;
+    height: 200px;  
+    width: 100%;
+}
+
+.list-header-pane > div {
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.list-header-stats {
+    margin-top: -1%;
+    background-color: gainsboro;
+    border: 1px solid black;
+}
+
+.list-header-stats > table {
+    width: 100%;
+}
+
+.list-header-stats > table > thead > tr > th, td {
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.header-info {
+    display: inline-block;
+    vertical-align: top;
+    width:29%;
+    margin: 0% -0.4% 0% 0%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #4C4C50;
+    color: white;
+    font-size: 120%;
+    font-weight: 100;
+}
+
+.header-info > p {
+    position: relative;
+    padding-left: 5%;
+    margin: 5%;
+}
+
+.header-info > div.header-title {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+}
+
+.header-info > div.data {
+    position: absolute;
+    top: 0%;
+    left: 77%;
+    text-align: right;
+}
+
+.header-cover {
+    background-image: url("../img/tnw-conference.jpg");
+    /*background-size:contain;*/
+    background-size: cover;
+    background-position: center bottom;
+    width:70.6%;
+}
+
+.conference-list {
+    margin: 2%;
+}
+
+.conference-list > div {
+    position: relative;
+    height: 250px;
+    width: 30.5%;
+    margin: 1%;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.conference-list > div > div {
+    display: block;
+    word-wrap:break-word;
+}
+
+.conference-box-header {
+    text-align: right;
+    font-weight: 600;
+    font-size: 90%;
+    color: white;
+    height: 21%;
+    margin-top: -1%;
+}
+
+.conference-box-header > p{
+    margin: 1%;
+}
+
+.conference-box-body {
+    position: absolute;
+    top: 25%;
+    height: 48%;
+    width: 93%;
+    padding: 2% 2% 2% 5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.conference-box-footer {
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 90%;
+    padding-left: 2%;
+    margin: 0% 5% 0% 3%;
+    border-top: 1px solid black;
+}
+
+.conference-box-logo {
+    position: absolute;
+    background-color: white;
+    top: 5%;
+    left: 5%;
+    height: 75px;
+    width: 75px;
+}
+
+.conference-box-logo > div {
+    margin: 5%;
+    height: 90%;
+    width: 90%;
+}
+
+.conference-box-footer >p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.page-scroller {
+    position: absolute;
+    right: 0%;
+    width: 30%;
+}
+
+.page-scroller > ul > li {
+    display: inline-block;
+    margin: 2%;
+    border-radius: 25px;
+    padding: 0.5%;
+}
+
+.page-scroller > ul > li > a{
+    display: inline-block;
+    margin: 2%;
+    border: 2px solid gray;
+    border-radius: 25px;
+    padding: 5%;
+    width: 100%;
+    text-decoration: none;
+}

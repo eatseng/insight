@@ -1,0 +1,107 @@
+/* you can also define the transition style
+   on the base class as well (.repeat-item) */
+.pic-animation.ng-enter, 
+.pic-animation.ng-leave, 
+.pic-animation.ng-move,
+.pic-animation
+ {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.pic-animation.ng-enter {
+  left:-10px;
+  opacity:0;
+}
+.pic-animation.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.pic-animation.ng-leave {
+  left:0;
+  opacity:1;
+}
+.pic-animation.ng-leave.ng-leave-active {
+  left:-10px;
+  opacity:0;
+}
+
+.pic-animation.ng-move {
+  opacity:0.5;
+}
+.pic-animation.ng-move.ng-move-active {
+  opacity:1;
+}
+
+/* Conference List Animations */
+
+.conference-box.ng-enter, 
+.conference-box.ng-leave, 
+.conference-box.ng-move {
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  position:relative;
+}
+
+.conference-box.ng-enter {
+  left:100%;
+  opacity:0;
+}
+.conference-box.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.conference-box.ng-leave {
+  left:0;
+  opacity:1;
+}
+.conference-box.ng-leave.ng-leave-active {
+  left:-100%;
+  opacity:0;
+}
+
+.conference-box.ng-move {
+  opacity:0.5;
+}
+.conference-box.ng-move.ng-move-active {
+  opacity:1;
+}
+
+/* Photo List Animations */
+
+.photo-box.ng-enter, 
+.photo-box.ng-leave, 
+.photo-box.ng-move {
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  position:relative;
+}
+
+.photo-box.ng-enter {
+  left:100%;
+  opacity:0;
+}
+.photo-box.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.photo-box.ng-leave {
+  left:0;
+  opacity:1;
+}
+.photo-box.ng-leave.ng-leave-active {
+  left:-100%;
+  opacity:0;
+}
+
+.photo-box.ng-move {
+  opacity:0.5;
+}
+.photo-box.ng-move.ng-move-active {
+  opacity:1;
+}
+

@@ -1,0 +1,121 @@
+.stats-container {
+	display: flex;
+	background-color: black;
+	color: white;
+}
+
+.stats-map {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 50%;
+	border: 1px solid white;
+}
+
+.button-group {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+
+.button {
+	width: 100%;
+	margin: 2%;
+	border: 1px solid white;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+	background-color: black;
+	color:white;
+}
+
+.button.active {
+	width: 100%;
+	margin: 2%;
+	border: 1px solid white;
+	cursor: pointer;
+	text-align: center;
+	background-color: #E6E68A;
+	color: black;
+}
+
+.stats-panel {
+	text-align: center;
+	border: 1px solid white;
+	width: 50%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+    font-weight: 200;
+}
+
+.panel-header > p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+}
+
+.panel-body {
+	font-size: 100%;
+	font-weight: 100;
+	display:flex;
+}
+
+.panel-body > div {
+	display: flex;
+	width: 49%;
+	border: 1px solid white;
+}
+
+.panel-body > div.top_10 {
+	text-align: center;
+	display: block;
+}
+
+.top_10 > table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top_10 > table > thead > tr > th, td {
+	text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+
+.panel-body > div > div{
+	width: 49%;
+
+}
+
+.y-axis .tick > text {
+	font-size: 80%;
+	font-weight: 100;
+	fill: white;
+}
+
+.y-axis > text {
+	font-size: 80%;
+	font-weight: 100;
+	fill: white;
+}
+
+.x-axis .tick > text {
+	font-size: 80%;
+	font-weight: 100;
+	fill: white;
+}
+
+.x-axis > text {
+	font-size: 80%;
+	font-weight: 100;
+	fill: white;
+}
+
+.stack-chart-legend > text {
+	font-weight: 100;
+}
+
+.chart {
+	width: 100%;
+}

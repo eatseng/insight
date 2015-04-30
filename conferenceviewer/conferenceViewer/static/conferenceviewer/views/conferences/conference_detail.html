@@ -1,0 +1,71 @@
+<title>Conferences Details | ConferenceViewer</title>
+
+<navbar></navbar>
+
+<div class="container">
+    
+    <div class="subnav">
+        <p>Search</p>
+        <div>
+            <p>By Word</p>
+            <input placeholder="Event Name" ng-model="search.word" ng-change="filterList()"/> 
+            <p>&nbsp<p>
+            <p style="background-color:gray;border:1px solid white;padding:3%;border-radius:25px;text-align:center;"><a href="#/stats" style="color:white;text-decoration:none;">Analytics</a><p>
+        </div>
+    </div>
+
+    <div class="subcontainer-detail">
+		<div class="header-info">
+            <p class="title">Conference Detail</p>
+            <p>&nbsp</p>
+            <p class="title">Event Name:</p>
+            <p>{{conf.event_name}}</p>
+            <p class="title">Event Type:</p>
+            <p>{{conf.event_type}}</p>
+            <p class="title">Start Time:</p>
+            <p>{{conf.start_time}}</p>
+            <p class="title">End Time:</p>
+            <p>{{conf.end_time}}</p>
+            <p class="title">Tweets Matched:</p>
+            <p>{{conf.tweets}}</p>
+        </div>
+    	<div class="top_tweets">
+    		<p class="title">Top Tweeted Words</p>
+    		<table>
+                <thead>
+                    <tr>
+                        <th style="font-weight:500">Words</th>
+                        <th style="font-weight:500">Counts</th>
+                    </tr>
+                </thead>          
+                <tbody>
+                    <tr ng-repeat="tweet in conf.tweeted_words track by $index">
+                        <td style="text-align:center" highlighter="tweet.word">{{tweet.word}}</td>
+                        <td style="text-align:center" highlighter="tweet.count">{{tweet.count}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    	</div>
+    </div>
+    <div class="subcontainer-gallery">
+    	<div ng-repeat="pbox in pagedItems[currentPage]" photo-box data="pbox" class="photo-box" id="{{$index}}">
+        </div>
+    </div>
+</div>
+<div class="page-scroller">
+    <ul>
+        <li ng-class="{disabled: currentPage == 0}">
+            <a href ng-click="prevPage()">« Prev</a>
+        </li>
+
+        <li ng-repeat="n in range(pagedItems.length, currentPage, currentPage + displayPage) "
+            ng-class="{disabled: n == currentPage}"
+            ng-click="setPage()">
+            <a href ng-bind="n + 1">1</a>
+        </li>
+
+        <li ng-class="{disabled: (currentPage) == pagedItems.length - 1}">
+            <a href ng-click="nextPage()">Next »</a>
+        </li>
+    </ul>
+</div>
